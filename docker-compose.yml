@@ -9,5 +9,10 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/index.html:/etc/nginx/html/index.html
-      - ./nginx/page.html:/etc/nginx/html/page.html
+      - ./nginx/login.html:/etc/nginx/html/login.html
+      - ./nginx/signup.html:/etc/nginx/html/signup.html
+      - ./nginx/confirm-acc.html:/etc/nginx/html/confirm-acc.html
+      - ./nginx/screener.html:/etc/nginx/html/screener.html
+      - ./nginx/dashboard.html:/etc/nginx/html/dashboard.html
+      - ./nginx/assets/:/etc/nginx/html/assets/
       
