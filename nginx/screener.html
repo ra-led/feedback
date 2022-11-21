@@ -1109,7 +1109,7 @@ $(document).ready(function(){
         if (event) { event.preventDefault(); }
         var query_params = {};
         var url = {
-            "base": "http://127.0.0.1:5000/screener/reviews",
+            "base": "http://api/screener/reviews",
         }
         query_params["aspects"] = $("#aspects-box input:checkbox:checked").map(function(){
           return $(this).val();
