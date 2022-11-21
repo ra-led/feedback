@@ -15,6 +15,7 @@ notebooks/*
 
 # keras checpoints
 *.model
+*bemp/
 
 # forecast plot
 *notebooks/forecast.html

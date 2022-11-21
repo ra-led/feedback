@@ -1,4 +1,7 @@
-Flask==2.0.1
-flask-cors==3.0.10
+Flask==2.0.1werkzeug==2.0.3Flask-RESTful==0.3.9
+flask-cors==3.0.10gunicorn==20.1.0
 numpy==1.23.2
 pandas==1.4.3
+bpemb
+pymorphy2==0.9.1
+scikit-learn==1.1.2

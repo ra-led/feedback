@@ -2,6 +2,8 @@ from flask import Flask, render_template
 from flask_cors import CORS
 import pandas as pd
 import json
+import os
+print(os.listdir())
 
 
 def dec(x):
@@ -20,7 +22,7 @@ def not_found(error):
 from api.routes import screener
 app.register_blueprint(screener.mod)
 
-app.db = pd.read_csv('trees_results_topics.tsv', sep='\t')
+app.db = pd.read_csv('api/trees_results_topics.tsv', sep='\t')
 app.db['aspects'] = app.db['aspects'].dropna().apply(dec)
 app.db['topics'] = app.db['topics'].dropna().apply(dec)
 app.db['sentiment'] = app.db['sentiment'].dropna().apply(dec)
@@ -36,7 +38,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import re
 
-app.b = BPEmb(lang="ru", vs=100000, dim=200, cache_dir=Path('./bemp'))
+app.b = BPEmb(lang="ru", vs=100000, dim=200, cache_dir=Path('api/bemp'))
 app.morph = MorphAnalyzer()
 
 
