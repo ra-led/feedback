@@ -13,9 +13,6 @@ topic2ru = {
 }
 topic2en = {v:k for k, v in topic2ru.items()}
 
-#{'aspects': ['Елка', 'Ветка', 'Коробка'], 'topics': ['Предложения', 'Цена', 'Возвраты', 'Доставка', 'Оплата'], 'sentiment': ['Positive', 'Negative', 'Neutral'], 'rating': ['1', '2', '3', '4', '5']}
-#{"aspects":["Коробка"],"topics":[],"sentiment":[],"rating":["1","2","3","4","5"]}
-#{'aspects': ['Коробка'], 'topics': [], 'sentiment': [], 'rating': ['1', '2', '3', '4', '5']}
 def selection(df, query):
     mask = df['rating'].astype(int).astype(str).isin(query['rating'])
     if query['aspects']:
